@@ -1,0 +1,28 @@
+<div class='row mb-4 post'>
+  <div class='col-md-5'>
+    <h2>
+      <h2>{{title}}</h2>
+    </h2>
+    <p>Posted on:
+      {{user.userName}}
+      {{format_date date_created}}</p>
+  </div>
+  <div class='col-md-7'>
+    <p>
+      {{text}}
+    </p>
+  </div>
+</div>
+{{>comments}}
+
+<form class='form new-comment-form'>
+  <div class='form-group'>
+    <label for='comment'>Add a Comment:</label>
+    <input class='form-input new-comment-form' type='text' id='comment' />
+  </div>
+  <div class='form-group'>
+    <button type='submit' class='btn btn-primary'>Submit</button>
+  </div>
+</form>
+
+<script src='/js/comment.js'></script>
