@@ -1,5 +1,10 @@
+body {
+  background: linear-gradient(0.45turn, #1f2447, #1ea9cc);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+}
 header,
-.post:not(:last-child) {
+.project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
@@ -8,35 +13,90 @@ header,
   border: none;
   padding: 0;
   cursor: pointer;
-  color: #1b89bc;
   text-decoration: none;
-  font-size: 100%;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .no-button:hover {
-  color: #065b83;
+  color: #30d3d3;
   text-decoration: underline;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+#comment-section {
+  font-size: 18px;
+  border: 2px black solid;
+  text-align: left;
+}
+.title {
+  text-align: center;
+  font-size: 25px;
+  border-bottom: 1px solid black;
+}
+#article {
+  font-size: 20px;
+}
+#blog-title {
+  font-size: 40px;
+  color: #30d3d3;
+  align-self: center;
 }
 
-.gradient-custom {
-  /* fallback for old browsers */
-  background: #4facfe; /* Chrome 10-25,
-  Safari 5.1-6 */
-  background: -webkit-linear-gradient(
-    to bottom right,
-    rgba(79, 172, 254, 1),
-    rgba(0, 242, 254, 1)
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+,
-  Safari 7+ */
-  background: linear-gradient(
-    to bottom right,
-    rgba(79, 172, 254, 1),
-    rgba(0, 242, 254, 1)
-  );
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal Header */
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 2px 16px;
+}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+

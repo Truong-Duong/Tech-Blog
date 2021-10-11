@@ -1,0 +1,89 @@
+<div class="row">
+    <div class="col-auto">
+        <h2>Welcome Back, {{name}}!</h2>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <h3>Write a new article?</h3>
+
+        <form class="form new-article-form">
+            <div class="form-group">
+                <label for="article-title">Title</label>
+                <input class="form-input" type="text" id="article-title" name="article-title" />
+            </div>
+
+            <div class="form-group">
+                <label for="article-content">content:</label>
+                <textarea class="form-input" id="article-content" name="article-content"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+        </form>
+    </div>
+
+    {{#if articles.length}}
+    <div class="col-md-6 article-list">
+        <h3>Your Articles:</h3>
+
+        {{#each articles as |article|}}
+        <div class="row mb-2">
+            <div class="col-md-8">
+                <h4><a href="/article/{{article.id}}">{{article.title}}</a></h4>
+            </div>
+     
+            <div class="col-md-4">
+                <button id ="articleDelete" class="btn btn-sm btn-danger" data-id="{{article.id}}">DELETE</button>
+                <button type = "submit" id ="articleEdit" class="btn btn-sm btn-warning" data-id="{{article.id}}" data-toggle="modal" data-target="#aricleModal">EDIT</button>
+            </div>
+        </div>
+
+        <!-- Article Modal -->
+        <div id="articleModal" class="modal">
+        
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Edit Article</h2>
+        
+                <form>
+                    <label for="editArtTitle">Title</label><br>
+                    <textarea type="textarea" cols="60" rows= "3" id="editArtTitle" name="editArtTitle" >{{article.title}}</textarea>
+                    <br>
+                    <label for="editArtCont">Content</label><br>
+                    <textarea type="textarea" cols= "60" rows="10" id="editArtCont" name="editArtCont">{{article.content}}</textarea>
+                    <br>
+                    <input id ="articlePost" type="submit" value="Submit" data-id="{{article.id}}" >
+                </form>
+            </div>
+
+        {{/each}}
+    </div>
+    {{/if}}
+</div>
+
+{{#if comments.length}}
+<div class="col-md-6 article-list">
+    <h3>Your Comments:</h3>
+
+    {{#each comments as |comment|}}
+    <div class="row mb-2">
+        <div class="col-md-8">
+            <h4><a href="/article/{{article.id}}">{{comment.content}}</a></h4>
+        </div>
+        <div class="col-md-4">
+            <button id = "commentDelete" class="btn btn-sm btn-danger" data-id="{{comment.id}}">DELETE</button>       
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{/if}}
+</div>
+
+
+
+
+
+<script src="./js/dashboard.js"></script>
