@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
 header,
-.post:not(:last-child) {
+.project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
@@ -24,19 +30,61 @@ header,
   margin-left: -5px;
 }
 
-.gradient-custom {
-  /* fallback for old browsers */
-  background: #4facfe; /* Chrome 10-25,
-  Safari 5.1-6 */
-  background: -webkit-linear-gradient(
-    to bottom right,
-    rgba(79, 172, 254, 1),
-    rgba(0, 242, 254, 1)
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+,
-  Safari 7+ */
-  background: linear-gradient(
-    to bottom right,
-    rgba(79, 172, 254, 1),
-    rgba(0, 242, 254, 1)
-  );
+.blog-name {
+  text-decoration: none;
+  color: #1E373C;
+}
+
+.blog-name:hover {
+  text-decoration: none;
+  color: #105274;
+}
+
+.state-link {
+  color: #213999;
+  font-weight: 500;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  transition: transform 0.2s;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  padding: 0 0.25em;
+}
+
+.state-link:hover {
+  color: #d04c3f;
+}
+
+.state-link::before,
+.state-link::after {
+  position: absolute;
+  top: 0;
+  font-weight: 100;
+  font-size: 150%;
+  line-height: 1;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.state-link::before {
+  left: -0.1em;
+  content: '[';
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.state-link::after {
+  right: -0.1em;
+  content: ']';
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.state-link:hover::before,
+.state-link:hover::after {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
 }
