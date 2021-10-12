@@ -1,21 +1,8 @@
 {
   "name": "Tech-Blog",
   "version": "1.0.0",
-  "description": "1. [Description](#Description)\r 2. [Installation](#Instructions)\r 3. [Usage](#Usage)\r 4. [License](#License)\r 5. [Contribution](#Contribution)\r 6. [Tests](#Tests)\r 7. [Questions](#Questions)",
+  "description": "## Description Create a tech blog follow the Model-View-Controller paradigm.",
   "main": "server.js",
-  "dependencies": {
-    "bcrypt": "^5.0.1",
-    "connect-session-sequelize": "^7.1.1",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "express-handlebars": "^5.3.3",
-    "express-session": "^1.17.2",
-    "mysql2": "^2.3.0",
-    "nodemon": "^2.0.12",
-    "path": "^0.12.7",
-    "sequelize": "^6.6.5"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -31,7 +18,14 @@
     "url": "https://github.com/Truong-Duong/Tech-Blog/issues"
   },
   "homepage": "https://github.com/Truong-Duong/Tech-Blog#readme",
-  "engines": {
-    "node": "14.x"
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.3.0",
+    "sequelize": "^6.6.5"
   }
 }

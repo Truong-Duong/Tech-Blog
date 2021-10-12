@@ -1,5 +1,3 @@
-.env
-
 node_modules
-
-homeworknotes
+.envnode_modules
+npm-debug.log
