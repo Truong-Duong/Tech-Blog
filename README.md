@@ -1,4 +1,4 @@
-# E-Commerce-Back-End
+# Tech Blog
 
 ## Description
 Create a tech blog follow the Model-View-Controller paradigm.
